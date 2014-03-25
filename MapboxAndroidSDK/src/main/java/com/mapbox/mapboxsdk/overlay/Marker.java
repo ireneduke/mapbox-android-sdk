@@ -2,6 +2,7 @@
 package com.mapbox.mapboxsdk.overlay;
 
 import android.content.Context;
+import android.util.Log;
 import com.mapbox.mapboxsdk.R;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import android.graphics.Point;
@@ -104,7 +105,7 @@ public class Marker {
         this.setTitle(aTitle);
         this.setDescription(aDescription);
         this.mLatLng = aLatLng;
-        System.out.println("markerconst" + mv + aTitle + aDescription + aLatLng);
+        Log.d(getClass().getCanonicalName(), "markerconst" + mv + aTitle + aDescription + aLatLng);
         if (mv != null) {
             context = mv.getContext();
             mapView = mv;
